@@ -1,0 +1,49 @@
+ALGORITHM PHRASE 
+
+VAR
+ ph: string;
+ c : char;
+ i, j, k, nbr,nmt : integer;
+
+
+BEGIN
+
+
+DO
+ write ("donner un caractere");
+ read ("c");
+ ph=ph+c;
+  while (c<>".");
+
+
+<--! 1 -->
+
+
+ k= length(ph)
+ 
+
+<--! 2-->
+
+ nmt:=1;
+FOR i FROM 1 TO k STEP 1 DO 
+IF (ph[i]=' ')
+ nmt=nmt+1;
+ END_IF
+ END_FOR
+
+<--! 3 --> 
+
+
+
+ nbr:=0;
+FOR j FROM 1 TO k STEP 1 DO 
+IF ph[j]in {A,E,U,O,Y,I} and ph[j]in {a,e,u,o,y,i}
+THEN nbr=nbr+1;
+END_IF
+END_FOR
+
+write (ph+".")
+write ("the length of the sentence is",k)
+write("the number of the words in the sentence is", nmt)
+write("the number of vowels in the sentence is " ,nbr)
+END
